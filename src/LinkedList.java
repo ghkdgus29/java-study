@@ -1,5 +1,3 @@
-import java.util.List;
-
 public class LinkedList {
 
     public ListNode add(ListNode head, ListNode nodeToAdd, int position) {

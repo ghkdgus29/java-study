@@ -11,11 +11,11 @@ class ListNodeStackTest {
     @Test
     void pushAndPop() {
         // given
-        ListNodeStack ListNodeStack = new ListNodeStack();
+        ListNodeStack listNodeStack = new ListNodeStack();
 
         // when
-        ListNodeStack.push(1);
-        int pop = ListNodeStack.pop();
+        listNodeStack.push(1);
+        int pop = listNodeStack.pop();
 
         // then
         assertThat(pop).isEqualTo(1);
@@ -25,12 +25,12 @@ class ListNodeStackTest {
     @Test
     void multiplePushAndPop() {
         // given
-        ListNodeStack ListNodeStack = new ListNodeStack();
-        ListNodeStack.push(1);
-        ListNodeStack.push(2);
+        ListNodeStack listNodeStack = new ListNodeStack();
+        listNodeStack.push(1);
+        listNodeStack.push(2);
 
         // when
-        int pop = ListNodeStack.pop();
+        int pop = listNodeStack.pop();
 
         // then
         assertThat(pop).isEqualTo(2);
@@ -40,10 +40,10 @@ class ListNodeStackTest {
     @Test
     void stackUnderflow() {
         // given
-        ListNodeStack ListNodeStack = new ListNodeStack();
+        ListNodeStack listNodeStack = new ListNodeStack();
 
         // when // then
-        assertThatThrownBy(() -> ListNodeStack.pop())
+        assertThatThrownBy(() -> listNodeStack.pop())
                 .isInstanceOf(IllegalArgumentException.class)
                 .hasMessage("스택 언더플로우");
     }
@@ -52,15 +52,15 @@ class ListNodeStackTest {
     @Test
     void multiPop() {
         // given
-        ListNodeStack ListNodeStack = new ListNodeStack();
-        ListNodeStack.push(3);
-        ListNodeStack.push(2);
-        ListNodeStack.push(1);
+        ListNodeStack listNodeStack = new ListNodeStack();
+        listNodeStack.push(3);
+        listNodeStack.push(2);
+        listNodeStack.push(1);
 
         // when
-        int pop1 = ListNodeStack.pop();
-        int pop2 = ListNodeStack.pop();
-        int pop3 = ListNodeStack.pop();
+        int pop1 = listNodeStack.pop();
+        int pop2 = listNodeStack.pop();
+        int pop3 = listNodeStack.pop();
 
         // then
         assertThat(pop1).isEqualTo(1);

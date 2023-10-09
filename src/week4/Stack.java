@@ -1,3 +1,5 @@
+package week4;
+
 public class Stack {
 
     private final int[] stack;
